@@ -35,7 +35,7 @@ const Projects = () => (
           className="relative group bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 rounded-2xl p-6 border border-cyan-100 shadow transition-all duration-300 overflow-hidden hover:ring-4 hover:ring-cyan-400/40"
         >
           <img
-            src={`{/src/assets/projects/project-${idx + 1}.jpg}`}
+            src={`/assets/projects/project-${idx + 1}.jpg`}
             alt={project.title}
             className="w-full h-32 object-cover rounded-t-lg mb-4"
           />
