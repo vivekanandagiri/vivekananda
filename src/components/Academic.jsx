@@ -43,31 +43,31 @@ const Academic = () => {
   return (
     <div>
       <h4 className="text-3xl font-bold text-center text-cyan-400 mb-12 tracking-wide">Academic Timeline</h4>
-      <div className="relative border-l-4 border-cyan-400 ml-8 mb-20 pl-6">
+      <div className="relative border-l-4 border-cyan-400 ml-2 sm:ml-8 mb-20 pl-3 sm:pl-6">
         {academicData.map((item, idx) => (
-          <div key={idx} className="mb-14 ml-6 relative group">
+          <div key={idx} className="mb-14 ml-2 sm:ml-6 relative group">
             {/* Timeline Dot */}
-            <div className="absolute w-5 h-5 bg-gradient-to-tr from-cyan-400 to-blue-500 rounded-full -left-3 border-4 border-slate-900 shadow-lg group-hover:scale-110 transition"></div>
+            <div className="absolute w-4 h-4 sm:w-5 sm:h-5 bg-gradient-to-tr from-cyan-400 to-blue-500 rounded-full -left-3 border-4 border-slate-900 shadow-lg group-hover:scale-110 transition"></div>
             {/* Card */}
-            <div className="bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 rounded-xl p-8 border border-cyan-200 shadow-xl hover:shadow-cyan-400/30 transition-all duration-300 group-hover:scale-[1.03]">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                <div className="text-cyan-300 font-semibold text-lg flex items-center">
+            <div className="bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 rounded-xl p-4 sm:p-8 border border-cyan-200 shadow-xl hover:shadow-cyan-400/30 transition-all duration-300 group-hover:scale-[1.03]">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 gap-2">
+                <div className="text-cyan-300 font-semibold text-base sm:text-lg flex items-center">
                   <SlCalender className="inline mr-2" /> {item.year}
                 </div>
-                <div className="text-slate-400 flex items-center mt-2 md:mt-0">
+                <div className="text-slate-400 flex items-center mt-2 md:mt-0 text-sm sm:text-base">
                   <FaLocationDot className="inline mr-2" /> {item.location}
                 </div>
               </div>
-              <div className="text-xl font-bold mb-2 flex items-center text-cyan-200">
+              <div className="text-lg sm:text-xl font-bold mb-2 flex items-center text-cyan-200">
                 <FaGraduationCap className="inline mr-2" /> {item.degree}
               </div>
-              <div className="text-slate-300 mb-2 flex items-center">
+              <div className="text-slate-300 mb-2 flex items-center text-sm sm:text-base">
                 <BiSolidSchool className="inline mr-2" /> {item.institution}
               </div>
-              <div className="text-slate-400 mt-2 text-base italic border-l-4 border-cyan-400 pl-4 py-2 bg-slate-900/60">
+              <div className="text-slate-400 mt-2 text-sm sm:text-base italic border-l-4 border-cyan-400 pl-3 sm:pl-4 py-2 bg-slate-900/60">
                 {item.Description}
               </div>
-              <div className="text-slate-200 mt-4 text-base">
+              <div className="text-slate-200 mt-4 text-sm sm:text-base">
                 <span className='font-semibold text-cyan-300'>Achievement:</span>
                 <span className="ml-2">{item.Achievements}</span>
               </div>
@@ -75,7 +75,7 @@ const Academic = () => {
           </div>
         ))}
         {/* Timeline End Dot */}
-        <div className="absolute w-5 h-5 bg-gradient-to-tr from-cyan-400 to-blue-500 rounded-full -left-3 border-4 border-slate-900 shadow-lg bottom-0"></div>
+        <div className="absolute w-4 h-4 sm:w-5 sm:h-5 bg-gradient-to-tr from-cyan-400 to-blue-500 rounded-full -left-3 border-4 border-slate-900 shadow-lg bottom-0"></div>
       </div>
     </div>
   )

@@ -13,7 +13,6 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('Home');
   const [menuOpen, setMenuOpen] = useState(false);
-  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +44,7 @@ const Navbar = () => {
       `}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center lg:px-16">
+        {/* Logo */}
         <div className="text-2xl font-bold text-cyan-400">Vivekananda Giri</div>
         {/* Desktop Nav */}
         <ul className="hidden md:flex gap-8">

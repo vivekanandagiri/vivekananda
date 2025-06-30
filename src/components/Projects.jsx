@@ -27,24 +27,24 @@ const projects = [
 
 const Projects = () => (
   <div>
-          <h4 className="text-3xl font-bold text-center text-cyan-400 mb-12 tracking-wide">Projects</h4>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-20">
+    <h4 className="text-3xl font-bold text-center text-cyan-400 mb-12 tracking-wide">Projects</h4>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 mb-20 px-2 sm:px-4">
       {projects.map((project, idx) => (
         <div
           key={idx}
-          className="relative group bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 rounded-2xl p-6 border border-cyan-100 shadow transition-all duration-300 overflow-hidden hover:ring-4 hover:ring-cyan-400/40"
+          className="relative group bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 rounded-2xl p-4 sm:p-6 border border-cyan-100 shadow transition-all duration-300 overflow-hidden hover:ring-4 hover:ring-cyan-400/40 flex flex-col"
         >
           <img
             src={`/assets/projects/project-${idx + 1}.jpg`}
             alt={project.title}
-            className="w-full h-32 object-cover rounded-t-lg mb-4"
+            className="w-full h-32 sm:h-40 object-cover rounded-t-lg mb-4"
           />
-          <h5 className="text-xl font-semibold text-cyan-400 mb-2">{project.title}</h5>
-          <p className="text-slate-300 mb-2">{project.description}</p>
+          <h5 className="text-lg sm:text-xl font-semibold text-cyan-400 mb-2">{project.title}</h5>
+          <p className="text-slate-300 mb-2 text-sm sm:text-base flex-1">{project.description}</p>
           {project.link && (
             <a
               href={project.link}
-              className="text-cyan-300 text-lg flex items-center gap-2"
+              className="text-cyan-300 text-base sm:text-lg flex items-center gap-2 mt-auto"
               target="_blank"
               rel="noopener noreferrer"
             >

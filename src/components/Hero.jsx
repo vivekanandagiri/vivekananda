@@ -53,23 +53,23 @@ const Hero = () => {
     };
 
     return (
-      <div className='border-b border-neutral-900 px-32 pb-4 lg:mb-35'>
-        <div className="flex flex-wrap">
+      <div className='border-b border-neutral-900 px-4 sm:px-8 md:px-16 lg:px-32 pb-4 lg:mb-35'>
+        <div className="flex flex-col lg:flex-row flex-wrap">
           <div className='w-full lg:w-1/2'>
-            <div className='flex flex-col  justify-center lg:items-start '>
-              <h2 className='text-2xl font-semibold tracking-tight   lg:text-3xl'>Namaste🙏, I am a..</h2>
-              <h1 className='pb-16 text-6xl font-bold tracking-tight lg:mt-12 lg:text-6xl animate-fade-in-down'>
+            <div className='flex flex-col justify-center items-center lg:items-start'>
+              <h2 className='text-xl sm:text-2xl font-semibold tracking-tight lg:text-3xl text-center lg:text-left'>Namaste🙏, I am a..</h2>
+              <h1 className='pb-8 sm:pb-12 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight lg:mt-12 animate-fade-in-down text-center lg:text-left'>
                 {HERO_TITLE}
               </h1>
-              <span className="typing-effect bg-gradient-to-r from-pink-400 via-slate-300 bg-clip-text text-4xl tracking-tight text-transparent block max-w-fit">
+              <span className="typing-effect bg-gradient-to-r from-pink-400 via-slate-300 bg-clip-text text-2xl sm:text-3xl lg:text-4xl tracking-tight text-transparent block max-w-fit mx-auto lg:mx-0">
                 {displayText}
                 <span className="blinking-caret"> /</span>
               </span>
-              <p className='my-2 max-w-xxl py-6 text-xl font-ligh t tracking-tight'>{HERO_CONTENT}</p>
-              <span className='text-2xl font-semibold tracking-tight mb-8'>
+              <p className='my-2 max-w-2xl py-6 text-base sm:text-lg md:text-xl font-light tracking-tight text-center lg:text-left'>{HERO_CONTENT}</p>
+              <span className='text-xl sm:text-2xl font-semibold tracking-tight mb-8 flex justify-center lg:justify-start'>
                 <StarBorder
                   as="button"
-                  className="custom-class "
+                  className="custom-class"
                   color="cyan"
                   speed="5s"
                   onClick={() => window.open('https://www.linkedin.com/in/vivekanandagiri/', '_blank')}
@@ -80,7 +80,7 @@ const Hero = () => {
               {showScroll && (
                 <button
                   onClick={scrollToTop}
-                  className="fixed bottom-8 right-8 z-50 animate-bounce  rounded-full p-2 flex flex-col items-center hover:bg-slate-800 transition"
+                  className="fixed bottom-8 right-8 z-50 animate-bounce rounded-full p-2 flex flex-col items-center hover:bg-slate-800 transition"
                   aria-label="Scroll to top"
                 >
                   <FiArrowUpCircle className="text-cyan-400" size={40} />
@@ -105,20 +105,18 @@ const Hero = () => {
               )}
             </div>
           </div>
-          <div className=' w-full lg:w-1/2 lg:p-0'>
-            <div className='flex justify-center  '>
-              <ProfileCard 
-                name="Vivekananda Giri"
-                title="Full Stack Developer"
-                handle="im_vivekananda"
-                status="Online"
-                contactText="Contact Me"
-                avatarUrl="/src/assets/VivekPhoto.jpg"
-                showUserInfo={true}
-                enableTilt={true}
-                onContactClick={() => window.open('https://ig.me/m/im_vivekananda', '_blank')}
-              />
-            </div>
+          <div className='w-full lg:w-1/2 lg:p-0 mt-10 lg:mt-0 flex justify-center'>
+            <ProfileCard 
+              name="Vivekananda Giri"
+              title="Full Stack Developer"
+              handle="im_vivekananda"
+              status="Online"
+              contactText="Contact Me"
+              avatarUrl="/assets/VivekPhoto.jpg"
+              showUserInfo={true}
+              enableTilt={true}
+              onContactClick={() => window.open('https://ig.me/m/im_vivekananda', '_blank')}
+            />
           </div>
         </div>
       </div>

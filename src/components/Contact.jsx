@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope, FaUser, FaRegCommentDots,FaLocationArrow } from 'react-icons/fa'
+import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope, FaUser, FaRegCommentDots, FaLocationArrow } from 'react-icons/fa'
 
 const Contact = () => {
   const formRef = useRef();
@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-slate-900 text-slate-300 p-4 rounded-lg shadow-lg shadow-cyan-400/70 mx-4 mt-10 mb-20 lg:mx-64">
+    <div className="bg-slate-900 text-slate-300 p-4 rounded-lg shadow-lg shadow-cyan-400/70 mx-2 sm:mx-4 md:mx-16 lg:mx-64 mt-10 mb-20">
       <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 text-cyan-400">
         <FaRegCommentDots className="text-cyan-400" /> Contact Me
       </h2>
@@ -37,13 +37,13 @@ const Contact = () => {
       )}
       <div className="flex flex-col lg:flex-row gap-10">
         {/* Contact Info */}
-        <div className="flex-1 bg-slate-800 rounded-lg p-6 shadow-md mb-6 lg:mb-0 flex flex-col justify-center">
-          <h3 className="text-xl font-semibold mb-4 text-cyan-300">Get in Touch</h3>
-          <div className="flex items-center gap-3 mb-3">
+        <div className="flex-1 bg-slate-800 rounded-lg p-4 sm:p-6 shadow-md mb-6 lg:mb-0 flex flex-col justify-center">
+          <h3 className="text-xl font-semibold mb-4 text-cyan-300 text-center lg:text-left">Get in Touch</h3>
+          <div className="flex items-center gap-3 mb-3 justify-center lg:justify-start">
             <FaEnvelope className="text-cyan-400" />
-            <span className="text-slate-200">vivekanandagiri@gmail.com</span>
+            <span className="text-slate-200 break-all">vivekanandagiri@gmail.com</span>
           </div>
-          <div className="flex items-center gap-3 mb-3">
+          <div className="flex items-center gap-3 mb-3 justify-center lg:justify-start">
             <FaLinkedin className="text-cyan-400" />
             <a
               href="https://www.linkedin.com/in/vivekanandagiri/"
@@ -54,7 +54,7 @@ const Contact = () => {
               linkedin
             </a>
           </div>
-          <div className="flex items-center gap-3 mb-3">
+          <div className="flex items-center gap-3 mb-3 justify-center lg:justify-start">
             <FaGithub className="text-cyan-400" />
             <a
               href="https://github.com/vivekanandagiri"
@@ -65,7 +65,7 @@ const Contact = () => {
               github
             </a>
           </div>
-          <div className="flex items-center gap-3 mb-3">
+          <div className="flex items-center gap-3 mb-3 justify-center lg:justify-start">
             <FaInstagram className="text-cyan-400" />
             <a
               href="https://instagram.com/vivekanandagiri"
@@ -76,7 +76,7 @@ const Contact = () => {
               instagram
             </a>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 justify-center lg:justify-start">
             <FaLocationArrow className="text-cyan-400" />
             <a
               href="https://www.google.com/maps/place/Bhubaneswar,+Odisha/@20.300807,85.6556413,52275m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3a1909d2d5170aa5:0xfc580e2b68b33fa8!8m2!3d20.2959847!4d85.8246101!16zL20vMDNjenFz?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
@@ -89,7 +89,7 @@ const Contact = () => {
           </div>
         </div>
         {/* Contact Form */}
-        <form ref={formRef} onSubmit={handleSubmit} className="flex-1 bg-slate-800 p-6 rounded-lg shadow-md">
+        <form ref={formRef} onSubmit={handleSubmit} className="flex-1 bg-slate-800 p-4 sm:p-6 rounded-lg shadow-md">
           <div className="mb-4">
             <label className="block text-slate-400 mb-2" htmlFor="name">
               <span className="flex items-center gap-2"><FaUser /> Name</span>
@@ -114,7 +114,7 @@ const Contact = () => {
             </label>
             <textarea name="message" className="w-full p-2 bg-slate-700 border border-cyan-400 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400" id="message" rows="4" required></textarea>
           </div>
-          <button className="bg-cyan-400 text-slate-800 px-6 py-2 rounded hover:bg-cyan-500 font-bold transition" type="submit">
+          <button className="bg-cyan-400 text-slate-800 px-6 py-2 rounded hover:bg-cyan-500 font-bold transition w-full sm:w-auto" type="submit">
             Send
           </button>
         </form>

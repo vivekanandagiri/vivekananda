@@ -52,14 +52,14 @@ const Portfolio = () => {
 
   return (
     <div>
-      <div className='pb-10 pt-10 '>
-        <h1 className='my-10 text-center text-4xl text-cyan-400'>Portfolio Showcase</h1>
-        <h2 className='mx-40 text-center text-xl font-light text-slate-400'>
-          Explore my journey through projects, certifications, and technical expertise. Each section<br /> represents a milestone in my continuous learning path.
+      <div className='pb-10 pt-10'>
+        <h1 className='my-10 text-center text-3xl sm:text-4xl text-cyan-400'>Portfolio Showcase</h1>
+        <h2 className='mx-2 sm:mx-10 md:mx-20 lg:mx-40 text-center text-base sm:text-lg md:text-xl font-light text-slate-400'>
+          Explore my journey through projects, certifications, and technical expertise. Each section<br className="hidden sm:block" /> represents a milestone in my continuous learning path.
         </h2>
       </div>
-      <div className=''>
-        <div className='multibox-container mx-24 my-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 shadow-xl p-6 rounded-lg bg-gradient-to-r from-purple-800 to-slate-900 border border-cyan-200'>
+      <div>
+        <div className='multibox-container mx-2 sm:mx-8 md:mx-16 lg:mx-24 my-6 sm:my-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 shadow-xl p-4 sm:p-6 rounded-lg bg-gradient-to-r from-purple-800 to-slate-900 border border-cyan-200'>
           {sections.map(section => (
             <div
               key={section.key}
@@ -69,12 +69,12 @@ const Portfolio = () => {
               onClick={() => setActiveSection(section.key)}
             >
               {section.icon}
-              <h3 className='text-xl font-bold text-center'>{section.label}</h3>
+              <h3 className='text-lg sm:text-xl font-bold text-center'>{section.label}</h3>
             </div>
           ))}
         </div>
       </div>
-      <div className='mx-24 my-10'>
+      <div className='mx-2 sm:mx-8 md:mx-16 lg:mx-24 my-6 sm:my-10'>
         {sections.find(section => section.key === activeSection)?.content}
       </div>
     </div>
