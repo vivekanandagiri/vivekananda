@@ -19,6 +19,12 @@ const certificates = [
     date: "April 2022",
     image: "/assets/certificates/Skillslash.jpg",
   },
+  {
+    title: "Workshop on Building REST API using spring boot",
+    issuer: "FirstBit Solutions",
+    date: "21st June 2025",
+    image: "/assets/certificates/Firstbit Solution.jpg",
+  }
 ];
 
 const Certification = () => {

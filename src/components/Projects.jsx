@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio to showcase my work and skills.",
-    link: "#"
+    link: "https://vivekananda.vercel.app/"
   },
   {
     title: "Weather App",
