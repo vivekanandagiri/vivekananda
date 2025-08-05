@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { FiArrowUpCircle } from "react-icons/fi";
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -38,12 +39,23 @@ function SectionWrapper({ id, children }) {
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [showScroll, setShowScroll] = useState(false);
 
   useEffect(() => {
     // Simulate loading time (e.g., 1.5s)
     const timer = setTimeout(() => setLoading(false), 1600);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => setShowScroll(window.scrollY > 500);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   if (loading) {
     return (
@@ -89,7 +101,18 @@ function App() {
           &copy; {new Date().getFullYear()} Vivekananda Giri. All rights reserved.
         </footer>
       </div>
-      <div></div>
+      <div>
+        {showScroll && (
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 z-50 animate-bounce rounded-full p-2 flex flex-col items-center hover:bg-slate-800 transition"
+            aria-label="Scroll to top"
+          >
+            <FiArrowUpCircle className="text-cyan-400" size={40} />
+            <span className="text-cyan-400 text-xs mt-1">Go to Top</span>
+          </button>
+        )}
+      </div>
     </div>
   )
 }

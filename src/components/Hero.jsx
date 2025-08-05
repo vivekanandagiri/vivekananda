@@ -48,9 +48,6 @@ const Hero = () => {
       return () => clearTimeout(typingTimeout);
     }, [charIndex, isDeleting, textIndex]);
 
-    const scrollToTop = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
 
     return (
       <div className='border-b border-neutral-900 px-4 sm:px-8 md:px-16 lg:px-32 pb-4 lg:mb-35'>
@@ -77,16 +74,6 @@ const Hero = () => {
                   Connect With Me <TbExternalLink className="inline ml-2 text-2xl" />
                 </StarBorder>
               </span>
-              {showScroll && (
-                <button
-                  onClick={scrollToTop}
-                  className="fixed bottom-8 right-8 z-50 animate-bounce rounded-full p-2 flex flex-col items-center hover:bg-slate-800 transition"
-                  aria-label="Scroll to top"
-                >
-                  <FiArrowUpCircle className="text-cyan-400" size={40} />
-                  <span className="text-cyan-400 text-xs mt-1">Go to Top</span>
-                </button>
-              )}
               {!showScroll && (
                 <div className="fixed left-1/2 bottom-6 z-40 -translate-x-1/2 flex flex-col items-center pointer-events-none select-none">
                   <svg

@@ -1,5 +1,14 @@
 import React, { useState } from 'react'
 
+// Add your Credly badge info here
+const credlyBadge = {
+  title: "Artificial Intelligence Fundamentals",
+  issuer: "IBM ",
+  date: "July 2025",
+  image: "/assets/certificates/IBM_SkillsBuild_Artificial_Inteligence_Fundamentals.jpg", // Example badge image URL from Credly
+  badgeUrl: "https://www.credly.com/badges/c6e0ae7f-b775-4f7a-8c2a-f45b68bdb17a/public_url", // Replace with your actual badge URL
+};
+
 const certificates = [
   {
     title: "Data Science with Artificial Intelligence",
@@ -24,6 +33,15 @@ const certificates = [
     issuer: "FirstBit Solutions",
     date: "21st June 2025",
     image: "/assets/certificates/Firstbit Solution.jpg",
+  },
+  // Add Credly badge as a certificate
+  {
+    title: credlyBadge.title,
+    issuer: credlyBadge.issuer,
+    date: credlyBadge.date,
+    image: credlyBadge.image,
+    badgeUrl: credlyBadge.badgeUrl,
+    isCredly: true,
   }
 ];
 
@@ -48,6 +66,16 @@ const Certification = () => {
             <h5 className="text-lg sm:text-xl font-semibold text-cyan-400 mb-2 text-center">{cert.title}</h5>
             <p className="text-slate-300 mb-2 text-center text-sm sm:text-base">Certified by {cert.issuer}</p>
             <p className="text-slate-300 mb-2 text-center text-sm sm:text-base">Date: {cert.date}</p>
+            {cert.isCredly && cert.badgeUrl && (
+              <a
+                href={cert.badgeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 text-cyan-300 underline text-sm"
+              >
+                View Credly Badge
+              </a>
+            )}
           </div>
         ))}
       </div>
@@ -71,6 +99,16 @@ const Certification = () => {
             <h5 className="text-lg sm:text-xl font-semibold text-cyan-400 mb-2 text-center">{selected.title}</h5>
             <p className="text-slate-300 mb-2 text-center text-sm sm:text-base">Certified by {selected.issuer}</p>
             <p className="text-slate-300 mb-2 text-center text-sm sm:text-base">Date: {selected.date}</p>
+            {selected.isCredly && selected.badgeUrl && (
+              <a
+                href={selected.badgeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 text-cyan-300 underline text-base"
+              >
+                View Credly Badge
+              </a>
+            )}
           </div>
         </div>
       )}
