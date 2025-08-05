@@ -1,13 +1,13 @@
 import React from 'react'
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaNpm ,FaJava,FaPython, FaDatabase} from 'react-icons/fa'
-import { SiJavascript, SiExpress, SiMongodb, SiTailwindcss, SiTypescript, SiVite,SiMysql, SiIntellijidea,SiJupyter  } from 'react-icons/si'
+import { SiJavascript, SiExpress, SiMongodb, SiTailwindcss, SiTypescript, SiVite,SiMysql, SiIntellijidea,SiJupyter,SiSpring   } from 'react-icons/si'
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { DiBootstrap} from "react-icons/di";
 
 const techs = [
   { name: 'React', icon: <FaReact className="text-cyan-400" size={40} /> },
   { name: 'Node.js', icon: <FaNodeJs className="text-green-500" size={40} /> },
-  { name: 'Express', icon: <SiExpress className="text-gray-300" size={40} /> },
+  { name: 'Spring Boot', icon: <SiSpring  className="text-green-600" size={40} /> },
   { name: 'MongoDB', icon: <SiMongodb className="text-green-600" size={40} /> },
   { name: 'JavaScript', icon: <SiJavascript className="text-yellow-400" size={40} /> },
   { name: 'TypeScript', icon: <SiTypescript className="text-blue-400" size={40} /> },
